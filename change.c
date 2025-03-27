@@ -17,9 +17,6 @@ int main(void){
     double p = 0;
     double change;
     
-    // int Y = 1;
-    // int N = 1;
-    
     while(1) {
     char retry = 'Y';
     printf("Put in the amount of change you want (WHOLE NUMBER): ");
@@ -53,12 +50,19 @@ int main(void){
         change = change - 1;
     }
 
-    printf("%.0lf hundred dollar bills\n %.0lf ten dollar bills\n %.0lf dollars\n %.0lf quarters\n %.0lf dimes\n %.0lf nickels\n %.0lf pennies\n ", h, t, d, q, di, n, p); 
+    printf(" %.0lf hundred dollar bills\n %.0lf ten dollar bills\n %.0lf dollars\n %.0lf quarters\n %.0lf dimes\n %.0lf nickels\n %.0lf pennies\n ", h, t, d, q, di, n, p); 
     printf("\nWould you like to Try Again?(Y/N) ");
     scanf(" %c", &retry);
     //printf("%c",retry);
     
     if(retry == 'Y'){
+        h = 0;
+        t = 0;
+        d = 0;
+        q = 0;
+        di = 0;
+        n = 0;
+        p = 0;
         continue;
     }
     else if(retry == 'N'){
